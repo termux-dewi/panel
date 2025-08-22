@@ -5,28 +5,18 @@
   "inbounds": [
     {
       "port": 5000,
-      "protocol": "shadowsocks",
+      "protocol": "trojan",
       "settings": {
-        "method": "none",
-        "password": "eldaa",
-        "network": "ws",
-        "wsSettings": {
-          "path": "/ss"
-        }
+        "clients": [
+          {
+            "password": "eldaa"
+          }
+        ]
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "certificates": [
-            {
-              "certificateFile": "/root/panel/cl.pem",
-              "keyFile": "/root/panel/cl.key"
-            }
-          ]
-        },
         "wsSettings": {
-          "path": "/ss"
+          "path": "/trojan"
         }
       }
     }
