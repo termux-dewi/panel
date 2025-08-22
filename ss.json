@@ -1,0 +1,40 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "none",
+        "password": "eldaa",
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ss"
+        }
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/root/panel/cl.pem",
+              "keyFile": "/root/panel/cl.key"
+            }
+          ]
+        },
+        "wsSettings": {
+          "path": "/ss"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
